@@ -54,3 +54,13 @@ class DeckOfCards:
 
     def __str__(self):
         return ', '.join(card.get_as_string() for card in self.cards)
+    
+    def draw_card(self):
+        if self.cards:
+            return self.cards.pop(0)  # Trekker et kort fra toppen av stokken
+        else:
+            raise ValueError("Deck is empty")
+
+    def shuffle(self):
+        """Stokker kortstokken"""
+        random.shuffle(self.cards)

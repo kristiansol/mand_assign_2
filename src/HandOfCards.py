@@ -12,13 +12,9 @@ class HandOfCards:
     __str__():
         Returns a string representation of the hand of cards.
     """
-    def __init__(self, cards):
-        """
-        Initializes a HandOfCards instance.
-
-        Args:
-            cards (list): A list of card objects that make up the hand.
-        """
+    def __init__(self, cards=None):
+        if cards is None:
+            cards = []  
         self.cards = cards
 
     def is_flush(self):
@@ -29,3 +25,5 @@ class HandOfCards:
 
     def __str__(self):
         return ', '.join(card.get_as_string() for card in self.cards)
+    
+    

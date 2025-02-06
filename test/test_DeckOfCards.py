@@ -1,9 +1,9 @@
 import sys
 import os
-sys.path.insert(0, os.path.abspath(os.path.join(os.getcwd(), '..', 'src')))
-
-
 import unittest
+sys.path.insert(0, os.path.abspath(os.path.join(os.getcwd(), '..', 'src')))
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../src')))
+
 from DeckOfCards import DeckOfCards
 
 class TestDeckOfCards(unittest.TestCase):
