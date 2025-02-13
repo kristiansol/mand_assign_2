@@ -1,10 +1,11 @@
 import sys
 import os
-sys.path.insert(0, os.path.abspath(os.path.join(os.getcwd(), '..', 'src')))
-
-
 import unittest
-from HandOfCards import HandOfCards
+
+sys.path.insert(0, os.path.abspath(os.path.join(os.getcwd(), '..', 'src')))
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../src')))
+
+from HandOfCards import *
 from PlayingCard import PlayingCard
 
 class TestHandOfCards(unittest.TestCase):
@@ -34,7 +35,7 @@ class TestHandOfCards(unittest.TestCase):
         hand.add_card(PlayingCard("H",3))
         hand.add_card(PlayingCard("H",4))
         hand.add_card(PlayingCard("H",5))
-        self.assertEqual(hand.is_flush(self), True)
+        self.assertEqual(hand.is_flush(), True)
         
         
         
