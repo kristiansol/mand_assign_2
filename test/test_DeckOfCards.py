@@ -4,7 +4,7 @@ import unittest
 sys.path.insert(0, os.path.abspath(os.path.join(os.getcwd(), '..', 'src')))
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../src')))
 
-from DeckOfCards import DeckOfCards
+from DeckOfCards import *
 
 class TestDeckOfCards(unittest.TestCase):
     def test_deck_size(self):
