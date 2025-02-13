@@ -37,6 +37,8 @@ class TestHandOfCards(unittest.TestCase):
         hand.add_card(PlayingCard("H",5))
         self.assertEqual(hand.is_flush(), True)
         
+    
+        
         
         
         
