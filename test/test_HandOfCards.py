@@ -10,13 +10,13 @@ from PlayingCard import PlayingCard
 class TestHandOfCards(unittest.TestCase):
     def test_add_card(self):
         hand = HandOfCards()
-        card = PlayingCard("Hearts", "2")
+        card = PlayingCard("H", 2)
         hand.add_card(card)
         self.assertIn(card, hand.cards)
 
     def test_remove_card(self):
         hand = HandOfCards()
-        card = PlayingCard("Diamonds", "King")
+        card = PlayingCard("D", 13)
         hand.add_card(card)
         hand.remove_card(card)
         self.assertNotIn(card, hand.cards)
@@ -24,8 +24,10 @@ class TestHandOfCards(unittest.TestCase):
     def test_hand_size(self):
         hand = HandOfCards()
         self.assertEqual(len(hand.cards), 0)
-        hand.add_card(PlayingCard("Clubs", "7"))
+        hand.add_card(PlayingCard("C", 7))
         self.assertEqual(len(hand.cards), 1)
+        
+    
 
 if __name__ == "__main__":
     unittest.main()

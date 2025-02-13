@@ -26,4 +26,15 @@ class HandOfCards:
     def __str__(self):
         return ', '.join(card.get_as_string() for card in self.cards)
     
+    def add_card(self, card):
+        self.cards.append(card)
+    
+    def remove_card(self, card):
+        if card in self.cards:
+            self.cards.remove(card)
+        else:
+            raise ValueError("Kortet finnes ikke i hånden")
+    
+    
+
     

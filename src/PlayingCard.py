@@ -34,7 +34,7 @@ class PlayingCard:
             raise ValueError("Parameter face must be a number between 1 to 13")
         
         self.suit = suit
-        self.face = face
+        self.face = int(face)
 
     def get_as_string(self):
         
