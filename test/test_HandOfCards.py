@@ -27,6 +27,19 @@ class TestHandOfCards(unittest.TestCase):
         hand.add_card(PlayingCard("C", 7))
         self.assertEqual(len(hand.cards), 1)
         
+    def test_is_flush(self):
+        hand = HandOfCards()
+        hand.add_card(PlayingCard("H",1))
+        hand.add_card(PlayingCard("H", 2))
+        hand.add_card(PlayingCard("H",3))
+        hand.add_card(PlayingCard("H",4))
+        hand.add_card(PlayingCard("H",5))
+        self.assertEqual(hand.is_flush(self), True)
+        
+        
+        
+        
+        
     
 
 if __name__ == "__main__":
